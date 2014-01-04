@@ -91,6 +91,14 @@ class sabnzbd (
   $log_level               = $::sabnzbd::params::log_level,
   $log_backups             = $::sabnzbd::params::log_backups,
   $enable_cherrypy_logging = $::sabnzbd::params::enable_cherrypy_logging,
+  $download_dir            = $::sabnzbd::params::download_dir,
+  $complete_dir            = $::sabnzbd::params::complete_dir,
+  $dirscan_dir             = $::sabnzbd::params::dirscan_dir,
+  $email_dir               = $::sabnzbd::params::email_dir,
+  $admin_dir               = $::sabnzbd::params::admin_dir,
+  $nzb_backup_dir          = $::sabnzbd::params::nzb_backup_dir,
+  $script_dir              = $::sabnzbd::params::script_dir,
+  $pre_script              = $::sabnzbd::params::pre_script,
   $servers                 = {},
   $categories              = {}
 ) inherits sabnzbd::params {

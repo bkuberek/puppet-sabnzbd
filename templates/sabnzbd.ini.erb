@@ -66,7 +66,7 @@ create_group_folders = 0
 never_repair = 0
 no_penalties = 0
 bandwidth_limit = 0
-dirscan_dir = ""
+dirscan_dir = <%= @dirscan_dir %>
 disable_api_key = 0
 email_to = ,
 rss_filenames = 0
@@ -79,12 +79,12 @@ movie_sort_extra = -cd%1
 ionice = ""
 enable_unzip = 1
 download_free = 2G
-email_dir = ""
-pre_script = None
+email_dir = <%= @email_dir %>
+pre_script = <%= @pre_script %>
 email_full = 0
 log_dir = <%= @log_dir %>
-admin_dir = admin
-nzb_backup_dir = ""
+admin_dir = <%= @admin_dir %>
+nzb_backup_dir = <%= @nzb_backup_dir %>
 tv_sort_countries = 1
 date_categories = tv,
 ssl_type = v23
@@ -126,7 +126,7 @@ login_realm = SABnzbd
 send_group = 0
 refresh_rate = 0
 movie_categories = movies,
-script_dir = ""
+script_dir = <%= @script_dir %>
 email_pwd = ""
 ignore_wrong_unrar = 0
 nice = ""
