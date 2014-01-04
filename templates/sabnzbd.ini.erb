@@ -6,7 +6,7 @@ __version__ = 19
 [[<%= key %>]]
 name = <%= key %>
 host = <%= value_hash['server_url'] %>
-enable = <%= value_hash['enabled'] || '1' %> 
+enable = <%= value_hash['enabled'] || '1' %>
 username = "<%= value_hash['username'] || '' %>"
 password = "<%= value_hash['password'] || '' %>"
 connections = <%= value_hash['connections'] %>
@@ -82,7 +82,7 @@ download_free = 2G
 email_dir = ""
 pre_script = None
 email_full = 0
-log_dir = logs
+log_dir = <%= @log_dir %>
 admin_dir = admin
 nzb_backup_dir = ""
 tv_sort_countries = 1

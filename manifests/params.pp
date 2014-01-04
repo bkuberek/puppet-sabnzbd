@@ -21,4 +21,12 @@ class sabnzbd::params {
   # Login settings for sabnzbd frontend, blank means no login
   $login_username     = ''
   $login_password     = ''
+
+  # logging
+  $log_dir                 = 'logs'
+  $log_new                 = '0'
+  $max_log_size            = '5242880'
+  $log_level               = '1'
+  $log_backups             = '5'
+  $enable_cherrypy_logging = '0'
 }

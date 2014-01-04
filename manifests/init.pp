@@ -72,28 +72,34 @@
 # Andrew Harley <morphizer@gmail.com>
 #
 class sabnzbd (
-  $user           = $::sabnzbd::params::user,
-  $config_path    = $::sabnzbd::params::config_path,
-  $host           = $::sabnzbd::params::host,
-  $port           = $::sabnzbd::params::port,
-  $extraopts      = undef,
-  $enable_https   = $::sabnzbd::params::enable_https,
-  $https_port     = $::sabnzbd::params::https_port,
-  $api_key        = $::sabnzbd::params::api_key,
-  $nzb_key        = $::sabnzbd::params::nzb_key,
-  $download_dir   = $::sabnzbd::params::download_dir,
-  $complete_dir   = $::sabnzbd::params::complete_dir,
-  $login_username = $::sabnzbd::params::login_username,
-  $login_password = $::sabnzbd::params::login_password,
-  $servers        = {},
-  $categories     = {}
+  $user                    = $::sabnzbd::params::user,
+  $config_path             = $::sabnzbd::params::config_path,
+  $host                    = $::sabnzbd::params::host,
+  $port                    = $::sabnzbd::params::port,
+  $extraopts               = undef,
+  $enable_https            = $::sabnzbd::params::enable_https,
+  $https_port              = $::sabnzbd::params::https_port,
+  $api_key                 = $::sabnzbd::params::api_key,
+  $nzb_key                 = $::sabnzbd::params::nzb_key,
+  $download_dir            = $::sabnzbd::params::download_dir,
+  $complete_dir            = $::sabnzbd::params::complete_dir,
+  $login_username          = $::sabnzbd::params::login_username,
+  $login_password          = $::sabnzbd::params::login_password,
+  $log_dir                 = $::sabnzbd::params::log_dir,
+  $log_new                 = $::sabnzbd::params::log_new,
+  $max_log_size            = $::sabnzbd::params::max_log_size,
+  $log_level               = $::sabnzbd::params::log_level,
+  $log_backups             = $::sabnzbd::params::log_backups,
+  $enable_cherrypy_logging = $::sabnzbd::params::enable_cherrypy_logging,
+  $servers                 = {},
+  $categories              = {}
 ) inherits sabnzbd::params {
 
   # make it run apt-get update first
   exec { "apt-update":
     command => "/usr/bin/apt-get update"
   }
-  
+
   Exec["apt-update"] -> Package <| |>
 
   # on ubuntu it's available in official repositories since jaunty
